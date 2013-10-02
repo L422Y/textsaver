@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>ansilove.js</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/ansilove.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/textsaver.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    (function ($) {
+        $.ajax({
+            url:'js/screens.txt',
+            success: function(data){
+                var _items = data.trim().split("\n");
+                textsaver.go(_items);
+
+            }
+        })
+
+    })(jQuery);
+</script>
+
+<div id="example" class="center"></div>
+
+
+</body>
+</html>
