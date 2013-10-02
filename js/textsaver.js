@@ -8,7 +8,7 @@ var textsaver = (function (AnsiLove) {
     var _running = true;
     var _current_time = 120;
     var opts = {
-        time_per_px: 2 //ms
+        time_per_px: 10 //ms
     }
 
     var _go = function (files, opts) {
@@ -27,11 +27,12 @@ var textsaver = (function (AnsiLove) {
                 });
                 _canvas.hide().appendTo($('body'));
                 _canvas.css('top', $(window).height()).show();
-                _current_time = _canvas.outerHeight() * opts.time_per_px;
                 clearTimeout(_timeout);
-                _timeout = setTimeout(_nextRandom, _current_time);
                 _last_canvas = _canvas;
+                _current_time = _canvas.height() * opts.time_per_px;
+
                 _scrollIt(_canvas);
+                _timeout = setTimeout(_nextRandom, _current_time);
 
             },
             {"font": "80x25", "bits": "8", "icecolors": 1, "columns": 80});
@@ -43,7 +44,7 @@ var textsaver = (function (AnsiLove) {
         $($canvas).animate({top: -_scrollTo}, {
             duration: _current_time,
             step: function (now, fx) {
-                fx.now = parseInt(now / 16) * 16;
+                fx.now = parseInt(now /16) * 16;
             },
             easing: 'linear'
         });
