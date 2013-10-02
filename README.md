@@ -1,4 +1,4 @@
-## textsaver: an ansilove.js scrolling ansi screensaver kit
+## textsaver: ansilove.js ansi screensaver kit
 
 ### How to use:
 
