@@ -15,7 +15,7 @@ This will update / regenerate the ansi file list so JavaScript knows what files 
 
 
 
-### This project uses <a href="https://github.com/andyherbert/ansilove.js">ansilove.js</a>
+### This project uses <a href="https://github.com/ansilove/ansilove.js">ansilove.js</a>
 Ansilove.js is a partial rewrite of ansilove and AnsiLove-C in the Javascript programming language. Unlike the original projects, Ansilove.js enables artscene related file formats to be displayed directly on a webpage on the client-side, and supports ANSi (.ANS), PCBOARD (.PCB), BiNARY (.BIN), ADF (.ADF), iDF (.IDF), TUNDRA (.TND) and XBiN (.XB) formats.
 
 Ansilove.js supports the majority of options found in the original set of tools.
